@@ -42,7 +42,8 @@ module.exports = {
     'jsx-a11y/no-static-element-interactions': 'off',
     'jsx-a11y/mouse-events-have-key-events': 'off',
     'linebreak-style': 'off',
-    'no-param-reassign': 'off'
+    'no-param-reassign': 'off',
+    'import/order': 'off'
   },
   globals: {
     fetch: false,

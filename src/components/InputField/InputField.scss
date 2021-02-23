@@ -1,0 +1,116 @@
+.input-field-wrapper {
+  $height: 53px;
+  $gradient: linear-gradient(90deg, rgba(37,173,182,1) 0%, rgba(41,214,170,1) 100%);
+  $left-color: rgba(37,173,182,1);
+  $error-color: #F44336;
+
+  label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #333333;
+
+    .mandatory-indicator {
+      color: #76BF44;
+    }
+  }
+
+  &.error {
+    .input-field,
+    .input-field.active {
+      .icon {
+        background: $error-color;
+      }
+
+      .field {
+        background: $error-color;
+      }
+    }
+  }
+
+  .input-field {
+    display: flex;
+
+    &.active {
+      .icon {
+        background: $left-color;
+      }
+
+      .field {
+        background: $gradient;
+      }
+    }
+
+    .icon {
+      position: relative;
+      padding: 1px;
+      flex-shrink: 0;
+      flex-basis: $height;
+      height: $height;
+      border-radius: 6px 0px 0px 6px;
+      background: $gradient;
+
+      .inner-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 1px;
+        bottom: 1px;
+        left: 1px;
+        right: 1px;
+        background: white;
+        border-radius: 6px 0px 0px 6px;
+
+        img {
+          width: 20px;
+        }
+      }
+    }
+
+    .field {
+      flex: 1;
+      position: relative;
+      border-radius: 0px 6px 6px 0px;
+      background: #DDDDDD;
+
+      .inner-field {
+        position: absolute;
+        top: 1px;
+        bottom: 1px;
+        left: 0px;
+        right: 1px;
+        border-radius: 0px 6px 6px 0px;
+        overflow: hidden;
+
+        input {
+          box-sizing: border-box;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          padding: 0 16px;
+          width: 100%;
+          height: 100%;
+          font-weight: bold;
+          font-size: 14px;
+          color: $left-color;
+          background: white;
+          border: none;
+          outline: none;
+
+          &::placeholder {
+            font-weight: 500;
+            color: #444;
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+
+  .error-message {
+    margin-top: 6px;
+    font-size: 14px;
+    color: $error-color;
+  }
+}

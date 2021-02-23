@@ -15,4 +15,5 @@ const store = configureStore({
 });
 
 export const persistor = persistStore(store);
+// persistor.purge();
 export default store;

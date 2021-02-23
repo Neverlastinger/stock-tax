@@ -1,0 +1,36 @@
+html, body, button {
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul, li, h1, h2, p {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+  border-radius: 0px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.attribution {
+  margin-top: 100px;
+  font-size: 10px;
+  color: #444;
+  text-align: center;
+
+  a {
+    font-weight: 500;
+    color: #444;
+  }
+}

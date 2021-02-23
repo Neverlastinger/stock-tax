@@ -1,0 +1,94 @@
+.brand-button {
+  $gradient: linear-gradient(90deg, rgba(37,173,182,1) 0%, rgba(41,214,170,1) 100%);
+  $left-color: rgba(37,173,182,1);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1px;
+  height: 53px;
+  background: $gradient;
+  border: none;
+  color: #073327;
+  font-weight: 600;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+
+  &[disabled] {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 14px 40px;
+    width: 100%;
+    background: white;
+    border-radius: 6px;
+  }
+
+  &:hover {
+    color: white;
+
+    > div {
+      background: transparent;
+    }
+  }
+
+  &:active {
+    color: white;
+    background: $gradient;
+
+    > div {
+      background: transparent;
+    }
+  }
+
+  &.primary {
+    color: white;
+
+    > div {
+      background: transparent;
+    }
+
+    &:hover,
+    &.active {
+      color: white;
+      background: $gradient;
+
+      > div {
+        background: transparent;
+      }
+    }
+  }
+
+  &.login {
+    background: transparent;
+    border: 1px solid #2BD995;
+
+    > div {
+      background: transparent;
+    }
+
+    &:hover {
+      background: #2BD995;
+
+      > div {
+        background: transparent;
+      }
+    }
+
+    &:active {
+      background: #24CA89;
+
+      > div {
+        background: transparent;
+      }
+    }
+  }
+}
