@@ -27,7 +27,7 @@ export const selectStockSummary = (state, stockName) => {
     count: Number(item.count),
     realDate: new Date(item.date)
   })).sort((t1, t2) => (
-    t1 < t2 ? -1 : 1
+    t1.realDate < t2.realDate ? -1 : 1
   ));
 
   const taxSells = [];
